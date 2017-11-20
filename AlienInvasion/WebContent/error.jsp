@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Invasion Failed!!! Go Back to your Planet ${User}</h2>
+	<h2>Invasion Failed!!! Go Back to your Planet</h2>
 </body>
 </html>

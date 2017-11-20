@@ -22,21 +22,18 @@ public class Login extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		//fetch value from init parameter
-		ServletConfig config=getServletConfig();
+		ServletConfig config=getServletConfig();getServletConfig();
 		String checkuser=config.getInitParameter("username");
 		String checkpassword=config.getInitParameter("password");
 		
-		System.out.println(checkuser);
-		System.out.println(checkpassword);
-		
-		//Set the user name and password in session attribute
-		HttpSession ses = request.getSession();
-		ses.setAttribute("User", User);
-		ses.setAttribute("pwd", password);
-		
-		//pass-welcome page else error page
-		if(User.equals(checkuser) && password.equals(checkuser)){
-		
+		//If pass-welcome page , else error page
+		if(User.equals(checkuser) && password.equals(checkpassword)){
+			
+			//Set the user name and password in session attribute
+			HttpSession ses = request.getSession();
+			ses.setAttribute("User", User);
+			ses.setAttribute("pwd", password);
+			
 			response.sendRedirect("welcome.jsp");
 		}
 		else{

@@ -12,11 +12,6 @@
 	if(ses.getAttribute("User")==null){
 		response.sendRedirect("login.jsp");
 	}
-	else if(!ses.getAttribute("User").equals("Biswa") && !ses.getAttribute("pwd").equals("biswa"))
-	{
-		response.sendRedirect("error.jsp");
-	}
-
 %>
 	<h2>Welcome ${User}, Have a pleasant time in Earth!!</h2>
 	
